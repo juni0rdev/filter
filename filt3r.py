@@ -40,8 +40,7 @@ for file in file:
 
     if '"status":"ok"' in req:
         print(f'Valid | {file}')
-        with open ('valid.txt', 'a') as file:
-	        file.write (f'{file}\n')
+        open('valid.txt','w').write(f'{file}\n')
 
     elif '"message":"No users found"' in req:
         print(f'Invalid')
